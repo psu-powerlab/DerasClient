@@ -1,0 +1,46 @@
+# depslib dependency file v1.0
+1576865856 source:/home/tylor/Dev/DerasClient/DerasClient/battery.cpp
+	<string>
+	"battery.h"
+
+1576778688 /home/tylor/Dev/DerasClient/DerasClient/battery.h
+	"clock.h"
+	"entity.h"
+	"batterymodel.h"
+
+1576787494 /home/tylor/Dev/DerasClient/DerasClient/clock.h
+	<string>
+	<chrono>
+
+1576709584 /home/tylor/Dev/DerasClient/DerasClient/entity.h
+
+1576865378 /home/tylor/Dev/DerasClient/DerasClient/batterymodel.h
+	<iostream>
+	<string>
+
+1576865870 source:/home/tylor/Dev/DerasClient/DerasClient/batteryflyweightfactory.cpp
+	<iostream>
+	<cstdlib>
+	"batteryflyweightfactory.h"
+
+1576864172 /home/tylor/Dev/DerasClient/DerasClient/batteryflyweightfactory.h
+	<iostream>
+	"batterymodel.h"
+
+1576865854 source:/home/tylor/Dev/DerasClient/DerasClient/clock.cpp
+	"clock.h"
+	<chrono>
+	<ctime>
+	<iostream>
+
+1576865636 source:/home/tylor/Dev/DerasClient/DerasClient/main.cpp
+	<iostream>
+	<string>
+	<vector>
+	<memory>
+	<thread>
+	<chrono>
+	"clock.h"
+	"batteryflyweightfactory.h"
+	"battery.h"
+
