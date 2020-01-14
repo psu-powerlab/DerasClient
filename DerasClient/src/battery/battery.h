@@ -1,8 +1,8 @@
 #ifndef BATTERY_H
 #define BATTERY_H
 
-#include "clock.h"
-#include "entity.h"
+#include "../utility/clock.h"
+#include "../utility/entity.h"
 #include "batterymodel.h"
 
 class Battery;

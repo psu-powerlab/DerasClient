@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="src/power" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +23,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="src/power" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -32,7 +34,20 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="main.cpp" />
+		<Unit filename="src/battery/battery.cpp" />
+		<Unit filename="src/battery/battery.h" />
+		<Unit filename="src/battery/batteryflyweightfactory.cpp" />
+		<Unit filename="src/battery/batteryflyweightfactory.h" />
+		<Unit filename="src/battery/batterymodel.h" />
+		<Unit filename="src/inverter/inverterflyweightfactory.cpp" />
+		<Unit filename="src/inverter/inverterflyweightfactory.h" />
+		<Unit filename="src/inverter/invertermodel.h" />
+		<Unit filename="src/main.cpp" />
+		<Unit filename="src/power/phase.cpp" />
+		<Unit filename="src/power/phase.h" />
+		<Unit filename="src/utility/clock.cpp" />
+		<Unit filename="src/utility/clock.h" />
+		<Unit filename="src/utility/entity.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />
