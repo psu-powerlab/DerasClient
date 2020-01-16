@@ -7,20 +7,20 @@ class Phase
 public:
     Phase
         (
-            const std::complex <float>& volts,
-            const std::complex <float>& amps
+            std::complex <double> volts,
+            std::complex <double> amps
         );
     virtual ~Phase();
-    std::complex <float> GetVoltage();
-    std::complex <float> GetCurrent();
-    float GetActivePower();
-    float GetReactivePower();
-    float GetApparentPower();
-    float GetPowerFactor();
+    std::complex <double> GetVoltage();
+    std::complex <double> GetCurrent();
+    double GetActivePower();
+    double GetReactivePower();
+    double GetApparentPower();
+    double GetPowerFactor();
 
 private:
-    std::complex <float> voltage_;
-    std::complex <float> current_;
+    std::complex <double> voltage_;
+    std::complex <double> current_;
 };
 
 #endif // PHASE_H

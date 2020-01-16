@@ -2,41 +2,32 @@
 #define INVERTERMODEL_H_INCLUDED
 
 // pure abstract
-class
-
-// pure abstract
 class InverterModel
 {
 public:
     InverterModel (
-        unsigned int vmin,
-        unsigned int vmax,
-        unsigned int vnom,
-        unsigned int irtd,
-        unsigned int ce_min,
-        unsigned int ce_max,
-        unsigned int de_min,
-        unsigned int de_max,
+        unsigned int volts_ac,
+        unsigned int amps_ac,
+        unsigned int hertz,
+        unsigned int max_volts_dc,
+        unsigned int min_volts_dc,
+        unsigned int amps_dc,
         std::string type)
     :
-        voltage_min_(vmin),
-        voltage_max_(vmax),
-        voltage_nominal_(vnom),
-        current_rated_(irtd),
-        charge_energy_min_(ce_min),
-        charge_energy_max_(ce_max),
-        discharge_energy_min_(de_min),
-        discharge_energy_max_(de_max),
+        rated_volts_ac_(volts_ac),
+        rated_amps_ac_(amps_ac),
+        rated_hertz_(hertz),
+        rated_amps_dc_(max_volts_dc),
+        max_volts_dc_(min_volts_dc),
+        min_volts_dc_(amps_dc),
         type_(type) {};
 
-    const unsigned int voltage_min_;
-    const unsigned int voltage_max_;
-    const unsigned int voltage_nominal_;
-    const unsigned int current_rated_;
-    const unsigned int charge_energy_min_;
-    const unsigned int charge_energy_max_;
-    const unsigned int discharge_energy_min_;
-    const unsigned int discharge_energy_max_;
+    const unsigned int rated_volts_ac_;
+    const unsigned int rated_amps_ac_;
+    const unsigned int rated_hertz_;
+    const unsigned int rated_amps_dc_;
+    const unsigned int max_volts_dc_;
+    const unsigned int min_volts_dc_;
     const std::string type_;
 };
 

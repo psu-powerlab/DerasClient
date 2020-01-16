@@ -3,10 +3,9 @@
 
 Phase::Phase
     (
-        const std::complex <float>& volts,
-        const std::complex <float>& amps
+        unsigned int volts
     )
-    : voltage_(volts), current_(amps)
+    : voltage_(volts), current_(0)
 {
     // do nothing
 }
@@ -16,32 +15,32 @@ Phase::~Phase()
     // do nothing
 }
 
-std::complex <float>  Phase::GetVoltage()
+std::complex <double>  Phase::GetVoltage()
 {
     return voltage_;
 }
 
-std::complex <float>  Phase::GetCurrent()
+std::complex <double>  Phase::GetCurrent()
 {
     return current_;
 }
 
-float Phase::GetActivePower()
+double Phase::GetActivePower()
 {
     return std::real(voltage_*current_);
 }
 
-float Phase::GetReactivePower()
+double Phase::GetReactivePower()
 {
     return std::imag(voltage_*current_);
 }
 
-float Phase::GetApparentPower()
+double Phase::GetApparentPower()
 {
     return std::abs(voltage_*current_);
 }
 
-float Phase::GetPowerFactor()
+double Phase::GetPowerFactor()
 {
-    return std::acos(std::abs(current_)/std::abs(voltage_));
+    return GetActivePower()/GetApparentPower();
 }
